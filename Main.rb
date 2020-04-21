@@ -62,7 +62,7 @@ def the_game
     puts "who could say no really! Anyhow, you open the door and Pippah trots away and you realize you havent got any plans for the day, it is"
     puts "........day after all! You think 'well i could go downstairs for some breakfast, have a shower, or there was that bottle of bourbon"
     puts "in my room remembering that if you bothered to look it up theres probably a happy hour going on somewhere'."
-    puts "What do you decide to do?"
+    puts "What do you decide to do? (Breakfast"
 
 
 

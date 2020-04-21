@@ -7,6 +7,20 @@ class Character
         @name = name
     end
     
+    def strength
+        @strength
+    end
+
+    def agility
+        @agility
+    end
+
+    def intelligence
+        @intelligence
+    end
+    def name
+        @name
+    end
     def stats
         puts "#{@name}"
         puts "Strength: #{@strength}, Agility: #{@agility}, Intelligence: #{@intelligence}"

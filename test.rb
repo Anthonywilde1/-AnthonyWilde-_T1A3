@@ -4,6 +4,8 @@ require_relative 'character.rb'
 
 class RealHumanTest < Test::Unit::TestCase
 
+#These tests show the class paarameters are working properly
+
     def test_strength
         human_strength = Character.new(6, 1, 9, "Ray Mysterio")
         assert_equal(6 ,human_strength.strength)
@@ -18,4 +20,10 @@ class RealHumanTest < Test::Unit::TestCase
         guy = Character.new(7, 8, 9, "Keanu Reeves")
         assert_equal(9, guy.intelligence)
     end
+
+    def test_name
+        bogan = Character.new(9, 9, 9, "Roe Jogan")
+        assert_equal("Roe Jogan", bogan.name)
+    end
+
 end

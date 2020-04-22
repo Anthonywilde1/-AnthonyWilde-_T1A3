@@ -152,11 +152,35 @@ def the_game
     puts "humanoid race indigenous to Earth's oceans. Maybe Lovecraft was speaking the truth when he wrote about all this stuff, who knew?"
     puts "Thankfully for some reason you managed to avoid going insane staring at this impossible being."
     if Character_selection[answer2].strength < 5 
-        puts "You feel hopeless staring at the monster knowing your strength will not be enough to overpower this creature"
+        puts "You feel hopeless staring at the monster knowing your strength will not be enough to overpower this creature, and feeling a flare"
+        puts "for nihilism you just stand there while the monster before you squashes you into a pancake."
+        puts "You have died in a desolate place, far from home, just like that spiderman movie except he was still on earth? That movie was"
+        puts "okay at best it didnt really do anything, not to mention spider man created his own problem in that movie, if any other movie did"
+        puts "that the marvel fandom would be screaming about how marvel could do it better, atleast the CGI in it was cool."
+        puts "GAME OVER"
+        puts "push any button to continue"
+        gets
+        done = false
+    end
+    puts "being super confident in your strength the only real question is how do you plan to go about kicking this fish gods ass?"
+    puts "What power will you use?(Saiyan, DoomSlayer, DevilMayCry)"
+    question5 = gets.chomp
+    case question5
+    when "saiyan"
+        puts "You focus your energy while screaming what seems like for atleast an entire 20 minute episode, but we know it was only 5"
+        puts "seconds and if you think otherwise come find me after. Suddenly your hair turns blonde and sticks up in the air like you"
+        puts "rubbed a balloon on it. Immediately you fly into the air and raise both hands above you asking the people of earth to share"
+        puts "their energy with you, you arent quite sure how you managed to communicate a global message but after what seems like a 5-6"
+        puts "episode arc you have a Spirit Bomb in your hands(amazing that Dagon did nothing during all of this).You throw the ball"
+        puts "at Dagon, he disintigrates leaving nothing behind."
+    when "doomslayer"
+        puts "Immediately some heavily distorted guitar starts playing some death metal, but you already knew that would happen. You run"
+        puts "faster then you probably should, you immediately are upon the abomination of flesh, proceeding to brutalize the OldGod, we"
+        puts "can only imagine what sheer amount of hyper violence occured that will not be derscribed here to keep the rating below R18+"
+        puts ""
         
 
     
-
 
     
 

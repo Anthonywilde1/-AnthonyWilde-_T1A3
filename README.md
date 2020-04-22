@@ -67,3 +67,7 @@ Storyboard (Character Strengths/ Stats/ Character Configuration) , Timed Respons
   The User will open the app and be greeted by it. I plan to make the Intro detailing what the game will be about(hinting at what may occur in the game. I will give the user the choice to pick between 4 classes using user input (Possibly creating an option to create their own object too). The user will be given a push number 1 through 5 for this.  The 4 classes will be from an Object class and depending on which character you use different things in the game will happen. The User will then play through the game interacting with multiple choice points (which will appear and you have to type in the action to do certain actions) I will make these actions be decided by user input and they will be text answers as I feel it would add to the nostalgia of the game/ make it more immersive. But I will also be utilising some time based decision making as well. It will be the final feature that will be used within the game and will happen whether or not the player wants it to happen, the player can help it along by making a choice with user input or by waiting for the timer to expire. I plan to write some error messages and possibly loops to require correct inputs to proceed. It will give definitive feedback to the user about what to do. 
 
   
+  
+  ## Flow Chart
+  
+  ![](/home/anthony/Downloads/20200421_135408.jpg)

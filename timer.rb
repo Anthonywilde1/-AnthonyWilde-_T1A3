@@ -31,12 +31,21 @@ elsif answer == "ignore"
 else
     puts "In your inaction you have fallen asleep"
     sleep(1)
+    puts "Push ENTER key to continue"
+    gets
     system('clear')
     multi_choice_time_loop
 end
 end
 
 
+
+
+
+
+
+
+#FAILED ATTEMPTS AT WRITING TIME BASED CODE
 
 # def timer1
 #     puts "Hi"

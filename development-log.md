@@ -15,3 +15,5 @@ Today I finished the code I was working on and now I am error handling all of my
 2. fix gets.chomp cases in start method to to_i because it is referring to integers.
 3. fix gets.chomp statement in start of the_game method to to_i as it would only run option 0 otherwise. also would throw errors while using string instead of integer for skill checks (as i would call array items with same input from answer1).
 4. flipped puts statement to be above character selection to show who you picked before computer know, also added a sleep of one to two seconds before system clear as you wouldn't see any message appear.  
+5. Whole game is stuck in infinite loop, realised when testing first loop.
+6. Fixed 

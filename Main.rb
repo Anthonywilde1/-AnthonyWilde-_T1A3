@@ -10,15 +10,15 @@ def help
     gets
 end
 
-def the_game
+def character_selection_screen
     puts "*****************************************************************************************************************************"
     puts "Welcome to the game! Please Pick A Character from the following(Input 0-3 or 4 for character creation"
     Strong_Anth.stats
     Agile_Anth.stats
     Smrt_Anth.stats
     Regular_Anth.stats
-    answer2 = gets.chomp.to_i
-    case answer2
+    @answer2 = gets.chomp.to_i
+    case @answer2
     when 0 
         puts "You have chosen Strong Anth!"
         Character_selection[0]
@@ -44,46 +44,62 @@ def the_game
         puts "Your character is not Anth..."
         Character_selection[4]
     end
+    multi_choice_time_loop
+end
+
+def multi_choice_time_loop
     sleep(1)
     system("clear")
-    dog_door = false
-    while dog_door == false
+    dog_door = 1
+    
+    while dog_door == 1
     puts "You wake up in your incredibly messy room, lucky its just the way you like it because if you were someone else experiencing you"
     puts "for the first time you would feel incredibly unsure as to why everything would be structured in such a way, like why are there"
     puts "so many powerplugs? Surely that could be a fire hazard. You remember the sound of scratching in your dream and then, you realize that the thing that has awoken you from the sweet"
     puts "embrace of sleep was your dog Pippah scratching at the door, something has clearly gotten her attention"
     puts "You could let her out of the room or ignore it and try to get back to sleep"
     puts "What do you do!? (Help or Ignore)"
-    question1 = gets.chomp
+    question1 = gets.chomp.downcase
+    
+
+    
     if question1 == "ignore"
-        dog_door = false
-    elsif question == "help"
-        return dog_door = true
-    #else
-        #puts "In your inaction you fell back to sleep"
-        #dog_door = false
+        puts "you ignore your dog and go back to sleep"
+         dog_door = 1
+    elsif question1 == "help"
+        dog_door = 2
+    else
+        puts "In your inaction you fell back to sleep"
+        sleep(1)
+        system('clear')
+        dog_door = 1
     end
+end
+
+def question_two_multi_choice
     puts "You decided to help your dog, knowing she'd just continue to scratch the door until you opened it anyway, and shes so goddam cute"
     puts "who could say no really! Anyhow, you open the door and Pippah trots away and you realize you havent got any plans for the day, it is"
     puts "........day after all! You think 'well i could go downstairs for some breakfast, have a shower, or there was that bottle of bourbon"
     puts "in my room remembering that if you bothered to look it up theres probably a happy hour going on somewhere'."
     puts "What do you decide to do? (Breakfast,Shower, Bourbon)"
+    
     question2 = gets.chomp
+    
     case question2
-        when "shower"
+    when "shower"
             puts "You take a shower and feel a wave of relief wash over you, truly the shower is the last bastion of humanity and while you are in"
             puts "this warm cocoon you feel a certain amount of time has passed, you finish your shower and get dressed."
         
-        when "bourbon"
+    when "bourbon"
             puts "You decide to ignore all rational thought and retreat back into your room and decide to swig the entire bottle of bourbon,"
             puts "you realize you shouldn't have probably done something so reckless as you pass out, realizing you wasted your whole day, but considering"
             puts "the pandemic this action may be a day well spent"
             done = false
-
-        when "breakfast"
+    when "breakfast"
+    
     end
     puts "You decide to go downstairs for breakfast"
-    if Character_selection[answer2].agility < 5
+    if Character_selection[@answer2].agility < 5
         puts "You attempt to go downstairs to have breakfast but for some reason even though you have done it countless times, you fall"
         puts "and not just any old fall, this is a fall sets the limits on the capabilities of what a fall could really be capable of being"
         puts "it was also a spiral staircase you fell down so by the end of the 180 degree bend and bottom of the stairs you die....."
@@ -92,6 +108,8 @@ def the_game
         gets 
         done = false
     end
+end
+question_two_multi_choice
     puts "You make it downstairs but you feel a chill run down your spine as you walk down the stairs, like a version of you died in a parralel"
     puts "universe for you to survive in this one. You shrug if off, not like you believe in that paranormal shit anyway, its time to get"
     puts "breakfast anyway, you enter the kitchen and look around for inspiration you see some fruit in a bowl, a kettle, a toaster, a pantry"
@@ -116,7 +134,7 @@ def the_game
         puts "GAME OVER"
         puts "push any button to continue"
         gets
-        done = false 
+        
         end
     
     puts "With breakfast settled you decided on what to do next, feeling stuck in this house for to long has gotten to you, so you decide the"
@@ -197,7 +215,6 @@ def the_game
     gets
     done = false 
 end
-end
         
 def start
     done = false
@@ -213,7 +230,7 @@ def start
     when 3
         return done = true
     when 1
-        the_game
+        character_selection_screen
        
     end
 end

@@ -19,5 +19,7 @@ Today I finished the code I was working on and now I am error handling all of my
 6. Fixed infinite loop by implementing beginning of DRY dividing sections of Story into separate code. 
 7. Continuing drying of code
 8. fixed gets of character creator to to_i for use of integers in skill checks.
-9. Re organized codee for DRY
+9. Re organized code for DRY.
+10. Figured out how to best use a timed base response to add timed based feature to  game 
+11. implemented by creating new file for time methods.
 

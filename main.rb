@@ -31,7 +31,7 @@ end
 
 def character_selection_screen
     puts "*****************************************************************************************************************************"
-    puts "Welcome to the game! Please Pick A Character from the following(Input 0-3 or 4 for character creation"
+    puts "Welcome to the game! Please Pick A Character from the following(Input 0-3 or 4 for character creation)"
     Strong_Anth.stats
     Agile_Anth.stats
     Smrt_Anth.stats
@@ -62,6 +62,11 @@ def character_selection_screen
         create
         puts "Your character is not Anth..."
         Character_selection[4]
+    else 
+        puts "think you are funny?"
+        puts "now you have to wait 5 seconds for trying to break my code"
+        sleep(5)
+        character_selection_screen
     end
     multi_choice_time_loop
 end
@@ -81,13 +86,17 @@ def multi_choice_time_loop
 
 end
 
-def question_two_multi_choice
+def filler1
     puts "You decided to help your dog, knowing she'd just continue to scratch the door until you opened it anyway, and shes so goddam cute"
     puts "who could say no really! Anyhow, you open the door and Pippah trots away and you realize you havent got any plans for the day, it is"
     puts "........day after all! You think 'well i could go downstairs for some breakfast, have a shower, or there was that bottle of bourbon"
     puts "in my room remembering that if you bothered to look it up theres probably a happy hour going on somewhere'."
+question_two_multi_choice
+end
+
+def question_two_multi_choice
     puts "What do you decide to do? (Breakfast,Shower, Bourbon)"
-    
+   
     question2 = gets.chomp
     
     case question2
@@ -103,6 +112,9 @@ def question_two_multi_choice
             
     when "breakfast"
         check1
+    else 
+        puts "If you keep this up you and me are going to have a problem"
+        question_two_multi_choice
     end
 end
 
@@ -117,17 +129,21 @@ def check1
         gets 
         start
     end
-    question_three_multi_choice
+    filler2
 end
 
 
-def question_three_multi_choice
+def filler2
     puts "You make it downstairs but you feel a chill run down your spine as you walk down the stairs, like a version of you died in a parralel"
     puts "universe for you to survive in this one. You shrug if off, not like you believe in that paranormal shit anyway, its time to get"
     puts "breakfast anyway, you enter the kitchen and look around for inspiration you see some fruit in a bowl, a kettle, a toaster, a pantry"
     puts "You decided to not look in the pantry however, living in this house for the past 2 months for quarrantine has you knowing whats inside"
     puts "without having to look, you make this decision because you have free will and are not being guided by an invisble man behind the"
-    puts "scenes.... ANYWAY, you decide after looking around you can eat either Toast, Yoghurt and Oats OR Cyanide(Toast, Yoghurt, Oats)"
+    puts "scenes...."
+    question_three_multi_choice
+end
+    def question_three_multi_choice
+    puts "ANYWAY, you decide after looking around you can eat either Toast, Yoghurt and Oats OR Cyanide(Toast, Yoghurt, Cyanide)"
     question3 = gets.chomp
     
     case question3
@@ -149,8 +165,14 @@ def question_three_multi_choice
         puts "push any button to continue"
         gets
         start
-        
+    else
+        puts "Look ago I get it you dont want to follow the rules, rules are made to be broken, fight the power, you want to rebel, but this"
+        puts "isn't really the place to do that because I'm in control here and you are just along for the ride so your gonna think about what you"
+        puts "did and then you are going to answer the question correctly OR ELSE"
+        sleep(2)
+        question_three_multi_choice
     end
+    
 end
 
 
@@ -181,16 +203,7 @@ def question_four_time_sensitive
     puts "you dont want to get to philosophical today. As you turn around to head inside you a portal materializes before you and a sense of dread"
     puts "runs up your spine, you feel a sense of cold coming from the portal and an aura of foreboding."
     puts "Suddenly! a tentacle comes out of the portal and wraps its way around you!"
-    puts "What do you do? Say something amusing or try and grab hold of something? (Quip,Grab)"
-    question4 = gets.chomp
-    if question4 == "quip"
-        puts "You shout out 'I really hope this isnt one of those Japanese Animes' while the tentacle visciously pulls you through the portal."
-    elsif question4 == "grab"
-        puts "You try to grab onto something with no success as a tentacle pulls you with no effort through a portal."
-    else
-        puts "in your inaction the tentacle pulls you through with little to no resistance." 
-    end
-    check3
+    timer2
 end
 
 
@@ -236,6 +249,21 @@ def question_five_multi_choice
         puts "watching they would scarely believe that a fight could be orchestrated so perfectly for one side, as you beat the ever living"
         puts "crap out of Dagon and look good while doing it before finishing the fight with a 'Real Impact' which kinda looks like a move from"
         puts "Street Fighter. Dagon surrenders his soul to you and it becomes a new Devil Arm."
+    else
+        puts "are you sure? (y/n)"
+        final = gets.chomp.downcase
+        if final == "y"
+            puts "the dev behind the game having cracked it with how much you have been trying to affect the integrity of his game finally snaps"
+            puts "Immediately the illusions that you see around you fade, however you are still in a simulation, the dev then cracks you open"
+            puts "puts his own code within you so you always know what a complete and utter failure you are to your parents and have the eternal"
+            puts "paranoia that noone takes you seriously and you feel the sudden urge to crap your pants at all times, knowing this you die"
+            puts "Why would you throw the game so close to the end"
+            puts "GAME OVER"
+            puts "push Enter key to proceed"
+            gets
+            start
+        end
+    question_five_multi_choice
     end
     ending
 end

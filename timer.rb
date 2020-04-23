@@ -22,7 +22,7 @@ answer.join(3)
 timer.join
 
 if answer == "help"
-    question_two_multi_choice
+    filler1
 elsif answer == "ignore"
     puts "you ignore your dog and go back to sleep, what a mean person you are."
     sleep(2)

@@ -9,7 +9,7 @@ Managed to tick several boxes today.
 
 # 23rd of April
 
-Today
+Today I had to figure out how to use the time command and to still have it allow me to accept user input before I started to go through my  code and test it for breaks, I had to fixed up all code for breaks from invalid user input and attempted to dry up the code by  creating new methods and practising recursion to allow for looping within its own method and trying to set up a Giant loop with individual loops was proving to be problematic and ineffective with recursion being better. I created a separate for Time based methods to be able to error handle them effectively without running through the whole program to get to a certain spot. Had to fix an error caused by time based methods looping where gets commands would stack, passed a check to proceed involving pushing enter. Fixed Charater Class for character creator method so it would only receive integers for attributes, entering strings will result in 0 but i consider this a feature. Will be attempting to add gems tomorrow for better presentation. Completed most of Treelo check boxes and added several more.   
 
 1. Had to fix up an 'end' that stopped start method from working. 
 
@@ -39,4 +39,6 @@ Today
 
 14. executed script fully to test for breaks.
 
-    Today I had to figure out how to use the time command and to still have it allow me to accept user input before I started to go through my  code and test it for breaks, I had to fixed up all code for breaks from invalid user input and attempted to dry up the code by  creating new methods and practising recursion to allow for looping within its own method and trying to set up a Giant loop with individual loops was proving to be problematic and ineffective with recursion being better.  
+    ![](/home/anthony/Pictures/Screenshot from 2020-04-23 16-59-49.png)
+
+    

@@ -37,11 +37,11 @@ Character_selection = [Strong_Anth,Agile_Anth,Smrt_Anth,Regular_Anth]
 
 def create
     puts "Please assign the strength attribute:"
-    str = gets.chomp
+    str = gets.chomp.to_i
     puts "Please assign the agility attribute:"
-    agl = gets.chomp
+    agl = gets.chomp.to_i
     puts "Please assign the intelligence attribute:"
-    int = gets.chomp
+    int = gets.chomp.to_i
     puts "Please enter the character's name:"
     nume = gets.chomp
     not_anth = Character.new(str, agl, int, nume)

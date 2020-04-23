@@ -1,7 +1,25 @@
 require_relative "character.rb"
 
+def start
+    @done = false
+    while @done == false
+    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    puts "Welcome !"
+    puts "You have reached the Anthony Covid Life Simulator!"
+    puts "What would you like to do?(Start = 1, Help = 2, Quit = 3)"
+    startcheck = gets.chomp.to_i
+    case startcheck
+    when 2
+        help
+    when 3
+        return done = true
+    when 1
+        character_selection_screen
+       
+    end
+    end
+end
 
-                                            
 def help
     puts "Anthony Covid Life Simulator is a game about making decisions to get your Character to the end of the day"
     puts "This is done through making decisions, throughout the game questions will be given to you that will be expected to be answered"
@@ -68,6 +86,7 @@ def multi_choice_time_loop
          dog_door = 1
     elsif question1 == "help"
         dog_door = 2
+        question_two_multi_choice
     else
         puts "In your inaction you fell back to sleep"
         sleep(1)
@@ -90,7 +109,7 @@ def question_two_multi_choice
     when "shower"
             puts "You take a shower and feel a wave of relief wash over you, truly the shower is the last bastion of humanity and while you are in"
             puts "this warm cocoon you feel a certain amount of time has passed, you finish your shower and get dressed."
-        
+            check1
     when "bourbon"
             puts "You decide to ignore all rational thought and retreat back into your room and decide to swig the entire bottle of bourbon,"
             puts "you realize you shouldn't have probably done something so reckless as you pass out, realizing you wasted your whole day, but considering"
@@ -98,10 +117,10 @@ def question_two_multi_choice
             start
             
     when "breakfast"
-    
+        check1
     end
 end
-question_two_multi_choice
+
 def check1    
     puts "You decide to go downstairs for breakfast"
     if Character_selection[@answer2].agility < 5
@@ -113,8 +132,9 @@ def check1
         gets 
         start
     end
+    question_three_multi_choice
 end
-check1
+
 
 def question_three_multi_choice
     puts "You make it downstairs but you feel a chill run down your spine as you walk down the stairs, like a version of you died in a parralel"
@@ -130,10 +150,12 @@ def question_three_multi_choice
         puts "You munch down on some toast, yum peanut butter, delicious, great choice you think to yourself, great thing we got that new 4 slice"
         puts "toaster just in time, could you imagine not being able to toast 4 pieces of bread at the same time, truly this is the peak of"
         puts "civilization, as you munch down on the toast you think about the GeoPolitical Climate and how their may be an incoming recession"
+        check2    
     when "yoghurt"
         puts "Yum! you think as you decide to bite down on some delicious yoghurt with oats, what a nice healthy way to start the day, man do you"
         puts "feel great for deciding to eat this, you know its gonna be benefical for you in years to come, in your own smugness you realise"
         puts "that you ate those oats quite quickly. You make a mental note to savour it next time."
+        check2    
     when "cyanide"
         puts "Despite the instincts within you fight to withstand what seems like an invisble hand guiding your hands, you grab the cyanide"
         puts "(AND WHO EVEN HAS SHIT LIKE THIS LYING AROUND?) and you ingest it, immediately you start to feel strange, you feel wrong, your"
@@ -145,7 +167,7 @@ def question_three_multi_choice
         
     end
 end
-question_three_multi_choice
+
 
 def check2    
     puts "With breakfast settled you decided on what to do next, feeling stuck in this house for to long has gotten to you, so you decide the"
@@ -163,8 +185,9 @@ def check2
         gets
         start
     end
+    question_four_time_sensitive
 end
-check2
+
 def question_four_time_sensitive
     puts "After you look around outside, you see a person coughing in the distance and staying safe and logical you decide not to approach them"
     puts "but who knows maybe you weren't so intelligent in another timeline, regardless you feel like this might be the timeline where everything"
@@ -182,9 +205,9 @@ def question_four_time_sensitive
     else
         puts "in your inaction the tentacle pulls you through with little to no resistance." 
     end
-
+    check3
 end
-question_four_time_sensitive
+
 
 def check3
     puts "You are tossed to the ground and roll a few times before you can get up, you feel slimy for having gone through that portal, but there"
@@ -204,8 +227,9 @@ def check3
         gets
         start
     end
+    question_five_multi_choice
 end
-check3
+
 def question_five_multi_choice
     puts "being super confident in your strength the only real question is how do you plan to go about kicking this fish gods ass?"
     puts "What power will you use?(Saiyan, DoomSlayer, DevilMayCry)"
@@ -228,8 +252,9 @@ def question_five_multi_choice
         puts "crap out of Dagon and look good while doing it before finishing the fight with a 'Real Impact' which kinda looks like a move from"
         puts "Street Fighter. Dagon surrenders his soul to you and it becomes a new Devil Arm."
     end
+    ending
 end
-question_five_multi_choice
+
 
 def ending
     puts "After the battle you make it home through a portal that leads you back to your house. You think after you step through it why did"
@@ -241,31 +266,4 @@ def ending
     gets
     start
 end
-ending
-
-        
-def start
-    @done = false
-    while @done == false
-    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-    puts "Welcome !"
-    puts "You have reached the Anthony Covid Life Simulator!"
-    puts "What would you like to do?(Start = 1, Help = 2, Quit = 3)"
-    startcheck = gets.chomp.to_i
-    case startcheck
-    when 2
-        help
-    when 3
-        return done = true
-    when 1
-        character_selection_screen
-       
-    end
-    end
-end
-
-
-
-
-
-
+start

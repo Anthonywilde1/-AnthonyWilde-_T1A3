@@ -22,19 +22,19 @@ def the_game
     when 0 
         Character_selection[0]
         puts "You have chosen Strong Anth!"
-        end
+        
     when 1 
         Character_selection[1]
         puts "You have chosen Agile Anth!"
-        end
+        
     when 2
         Character_selection[2]
         puts "You have chosen Smrt Anth!"
-        end    
+            
     when 3 
         Character_selection[3]
         puts "You have chosen Regular Anth"
-        end
+        
     when 4
         create
         puts "Your character is not Anth..."
@@ -42,7 +42,7 @@ def the_game
     end
     system("clear")
     dog_door = false
-    while dog_door = false
+    while dog_door == false
     puts "You wake up in your incredibly messy room, lucky its just the way you like it because if you were someone else experiencing you"
     puts "for the first time you would feel incredibly unsure as to why everything would be structured in such a way, like why are there"
     puts "so many powerplugs? Surely that could be a fire hazard. You remember the sound of scratching in your dream and then, you realize that the thing that has awoken you from the sweet"
@@ -175,37 +175,45 @@ def the_game
         puts "at Dagon, he disintigrates leaving nothing behind."
     when "doomslayer"
         puts "Immediately some heavily distorted guitar starts playing some death metal, but you already knew that would happen. You run"
-        puts "faster then you probably should, you immediately are upon the abomination of flesh, proceeding to brutalize the OldGod, we"
-        puts "can only imagine what sheer amount of hyper violence occured that will not be derscribed here to keep the rating below R18+"
-        puts ""
+        puts "faster then you probably should, you immediately are upon the "
         
-
-    
-
-    
-
-
-
-
-
-def Start
+        puts "You feel overly confident in your ability to defeat this 'god' that you decide to not take it seriously, before moving faster"
+        puts "then the eye can see and proceeding to mid air combo Dagon with an assortment of weapons, guns and styles, if there was anyone"
+        puts "watching they would scarely believe that a fight could be orchestrated so perfectly for one side, as you beat the ever living"
+        puts "crap out of Dagon and look good while doing it before finishing the fight with a 'Real Impact' which kinda looks like a move from"
+        puts "Street Fighter. Dagon surrenders his soul to you and it becomes a new Devil Arm."
+    end
+    puts "After the battle you make it home through a portal that leads you back to your house. You think after you step through it why did"
+    puts "walk through it without even questioning where it would lead. You find your dog looking at you and wagging her tail clearly happy"
+    puts "to see you, you did it, you survived another day, you pat your dog and feel good for doing it :)."
+    puts "VICTORY"
+    puts "Congratulations"
+    puts "press any key to continue"
+    gets
+    done = false 
+end
+        
+def start
     done = false
-    while done = false
+    while done == false
     puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     puts "Welcome !"
     puts "You have reached the Anthony Covid Life Simulator!"
     puts "What would you like to do?(Start = 1, Help = 2, Quit = 3)"
-    Start_check = gets.chomp
-    case Start_check
-       when 2
+    startcheck = gets.chomp
+    case startcheck
+    when 2
         help
-       when 3
+    when 3
         return done = true
-       when 1
-        the_game
-       end
+    when 1
+        thegame
+       
     end
 end
-        
+end
 
+
+
+start
                                             

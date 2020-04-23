@@ -40,7 +40,7 @@ end
 
 def timer2
     timer = Thread.new do
-        3.downto(0) do |i|
+        2.downto(0) do |i|
             sleep(1)
         end
     end
@@ -50,7 +50,7 @@ def timer2
     answer30 = gets.chomp.downcase.strip
     end
     
-    answer30.join(3)
+    answer30.join(2)
     timer.join
 
     

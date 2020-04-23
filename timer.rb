@@ -38,6 +38,34 @@ else
 end
 end
 
+def timer2
+    timer = Thread.new do
+        3.downto(0) do |i|
+            sleep(1)
+        end
+    end
+    
+    answer30 = Thread.new do 
+    puts "What do you do? Say something amusing or try and grab hold of something? (Quip,Grab)"
+    answer30 = gets.chomp.downcase.strip
+    end
+    
+    answer30.join(3)
+    timer.join
+
+    
+    if answer30 == "quip"
+        puts "You shout out 'I really hope this isnt one of those Japanese Animes' while the tentacle visciously pulls you through the portal."
+    elsif answer30 == "grab"
+        puts "You try to grab onto something with no success as a tentacle pulls you with no effort through a portal."
+    else
+        puts "in your inaction the tentacle pulls you through with little to no resistance." 
+        puts "Push Enter key to continue"
+        gets
+    end
+    check3
+end
+
 
 
 

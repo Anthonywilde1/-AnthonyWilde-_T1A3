@@ -2,6 +2,56 @@ require "tty-prompt"
 prompt = TTY::Prompt.new
 require 'timeout'
 
+
+
+def timed_response1
+
+
+timer = Thread.new do
+    3.downto(0) do |i|
+        sleep(1)
+    end
+end
+
+answer = Thread.new do 
+    puts "What do you do? (Help/Ignore)"
+answer = gets.chomp.downcase.strip
+end
+
+answer.join(3)
+timer.join
+
+if answer == "help"
+    question_two_multi_choice
+elsif answer == "ignore"
+    puts "you ignore your dog and go back to sleep, what a mean person you are."
+    sleep(2)
+    system('clear')
+    multi_choice_time_loop
+else
+    puts "In your inaction you have fallen asleep"
+    sleep(1)
+    system('clear')
+    multi_choice_time_loop
+end
+end
+
+
+
+# def timer1
+#     puts "Hi"
+#     timestamp = Time.new
+#     until timestamp + 3
+#         puts "Please answer a/b"
+#         c = gets.chomp
+#         if c == "a"
+#             puts "YAY"
+#         else 
+#             puts "NAY"
+#         end
+#     end
+# end
+# timer1
 # begin
 #  dog_door = false
 #  while dog_door == false

@@ -1,4 +1,5 @@
 require_relative "character.rb"
+require_relative "timer.rb"
 
 def start
     @done = false
@@ -68,32 +69,16 @@ end
 def multi_choice_time_loop
     sleep(1)
     system("clear")
-    dog_door = 1
     
-    while dog_door == 1
+    
     puts "You wake up in your incredibly messy room, lucky its just the way you like it because if you were someone else experiencing you"
     puts "for the first time you would feel incredibly unsure as to why everything would be structured in such a way, like why are there"
     puts "so many powerplugs? Surely that could be a fire hazard. You remember the sound of scratching in your dream and then, you realize that the thing that has awoken you from the sweet"
     puts "embrace of sleep was your dog Pippah scratching at the door, something has clearly gotten her attention"
     puts "You could let her out of the room or ignore it and try to get back to sleep"
-    puts "What do you do!? (Help or Ignore)"
-    question1 = gets.chomp.downcase
-    
+   
+    timed_response1
 
-    
-    if question1 == "ignore"
-        puts "you ignore your dog and go back to sleep"
-         dog_door = 1
-    elsif question1 == "help"
-        dog_door = 2
-        question_two_multi_choice
-    else
-        puts "In your inaction you fell back to sleep"
-        sleep(1)
-        system('clear')
-        dog_door = 1
-    end
-end
 end
 
 def question_two_multi_choice

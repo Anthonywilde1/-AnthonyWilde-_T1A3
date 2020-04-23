@@ -17,29 +17,34 @@ def the_game
     Agile_Anth.stats
     Smrt_Anth.stats
     Regular_Anth.stats
-    answer2 = gets.chomp
+    answer2 = gets.chomp.to_i
     case answer2
     when 0 
-        Character_selection[0]
         puts "You have chosen Strong Anth!"
+        Character_selection[0]
+        
         
     when 1 
-        Character_selection[1]
         puts "You have chosen Agile Anth!"
+        Character_selection[1]
+        
         
     when 2
-        Character_selection[2]
         puts "You have chosen Smrt Anth!"
+        Character_selection[2]
+        
             
-    when 3 
+    when 3
+        puts "You have chosen Regular Anth" 
         Character_selection[3]
-        puts "You have chosen Regular Anth"
+       
         
     when 4
         create
         puts "Your character is not Anth..."
         Character_selection[4]
     end
+    sleep(1)
     system("clear")
     dog_door = false
     while dog_door == false
@@ -76,7 +81,7 @@ def the_game
             done = false
 
         when "breakfast"
-        end
+    end
     puts "You decide to go downstairs for breakfast"
     if Character_selection[answer2].agility < 5
         puts "You attempt to go downstairs to have breakfast but for some reason even though you have done it countless times, you fall"
@@ -192,6 +197,7 @@ def the_game
     gets
     done = false 
 end
+end
         
 def start
     done = false
@@ -200,14 +206,14 @@ def start
     puts "Welcome !"
     puts "You have reached the Anthony Covid Life Simulator!"
     puts "What would you like to do?(Start = 1, Help = 2, Quit = 3)"
-    startcheck = gets.chomp
+    startcheck = gets.chomp.to_i
     case startcheck
     when 2
         help
     when 3
         return done = true
     when 1
-        thegame
+        the_game
        
     end
 end

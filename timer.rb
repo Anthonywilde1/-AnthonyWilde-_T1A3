@@ -18,7 +18,7 @@ def timed_response1
 
 
 timer = Thread.new do
-    4.downto(0) do |i|
+    5.downto(0) do |i|
         sleep(1)
     end
 end
@@ -28,7 +28,7 @@ answer = Thread.new do
 answer = gets.chomp.downcase.strip
 end
 
-answer.join(4)
+answer.join(5)
 timer.join
 
 if answer == "help"

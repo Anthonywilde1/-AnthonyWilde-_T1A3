@@ -2,13 +2,21 @@ require "tty-prompt"
 prompt = TTY::Prompt.new
 require 'timeout'
 
+def scroll(string)
+    string.each_char do |x|
+        print x
+        sleep(0.07)
+      end
+    end
+    
+
 
 
 def timed_response1
 
 
 timer = Thread.new do
-    3.downto(0) do |i|
+    4.downto(0) do |i|
         sleep(1)
     end
 end
@@ -18,20 +26,20 @@ answer = Thread.new do
 answer = gets.chomp.downcase.strip
 end
 
-answer.join(3)
+answer.join(4)
 timer.join
 
 if answer == "help"
     filler1
 elsif answer == "ignore"
-    puts "you ignore your dog and go back to sleep, what a mean person you are."
+    scroll("you ignore your dog and go back to sleep, what a mean person you are.")
     sleep(2)
     system('clear')
     multi_choice_time_loop
 else
-    puts "In your inaction you have fallen asleep"
+    scroll("In your inaction you have fallen asleep\n")
     sleep(1)
-    puts "Push ENTER key to continue"
+    scroll("Push ENTER key TWICE to continue\n")
     gets
     system('clear')
     multi_choice_time_loop
@@ -55,12 +63,12 @@ def timer2
 
     
     if answer30 == "quip"
-        puts "You shout out 'I really hope this isnt one of those Japanese Animes' while the tentacle visciously pulls you through the portal."
+        scroll("You shout out 'I really hope this isnt one of those Japanese Animes' while the tentacle visciously pulls you through the portal.")
     elsif answer30 == "grab"
-        puts "You try to grab onto something with no success as a tentacle pulls you with no effort through a portal."
+        scroll("You try to grab onto something with no success as a tentacle pulls you with no effort through a portal.")
     else
-        puts "in your inaction the tentacle pulls you through with little to no resistance." 
-        puts "Push Enter key to continue"
+        scroll("in your inaction the tentacle pulls you through with little to no resistance.") 
+        puts "Push Enter key TWICE to continue"
         gets
     end
     check3

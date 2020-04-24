@@ -5,9 +5,10 @@ def start
     @done = false
     while @done == false
     puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-    puts "Welcome !"
-    puts "You have reached the Anthony Covid Life Simulator!"
-    puts "What would you like to do?(Start = 1, Help = 2, Quit = 3)"
+    scroll("Welcome!\n")
+    scroll("You have reached the Anthony Covid Life Simulator!\n")
+    scroll("What would you like to do?\n")
+        puts "(Start = 1, Help = 2, Quit = 3)"
     startcheck = gets.chomp.to_i
     case startcheck
     when 2
@@ -16,22 +17,21 @@ def start
         return done = true
     when 1
         character_selection_screen
+    else
+        done = false
        
     end
     end
 end
 
 def help
-    puts "Anthony Covid Life Simulator is a game about making decisions to get your Character to the end of the day"
-    puts "This is done through making decisions, throughout the game questions will be given to you that will be expected to be answered"
-    puts "These questions will often be backed up with the commands avaliable to you and it is in your best interest to try and follow" 
-    puts "the instructions to the letter!, thats pretty much it, simple right?, When you are ready push enter to get back to the Start"
+    scroll("Anthony Covid Life Simulator is a game about making decisions to get your Character to the end of the day.\nThis is done through making decisions, throughout the game questions will be given to you that will be expected to be answered.\nThese questions will often be backed up with the commands avaliable to you.\nIt is in your best interest to try and follow the instructions to the letter!, thats pretty much it, simple right?\nWhen you are ready push enter to get back to the Start\n")
     gets
 end
 
 def character_selection_screen
     puts "*****************************************************************************************************************************"
-    puts "Welcome to the game! Please Pick A Character from the following(Input 0-3 or 4 for character creation)"
+    scroll("Welcome to the game!\nPlease Pick A Character from the following\n(Input 0-3 or 4 for character creation)")
     Strong_Anth.stats
     Agile_Anth.stats
     Smrt_Anth.stats
@@ -63,8 +63,8 @@ def character_selection_screen
         puts "Your character is not Anth..."
         Character_selection[4]
     else 
-        puts "think you are funny?"
-        puts "now you have to wait 5 seconds for trying to break my code"
+        scroll("Think you are funny?,\nHUH?")
+        scroll("Now you have to wait 5 seconds for trying to break my code\n")
         sleep(5)
         character_selection_screen
     end
@@ -75,22 +75,14 @@ def multi_choice_time_loop
     sleep(1)
     system("clear")
     
-    
-    puts "You wake up in your incredibly messy room, lucky its just the way you like it because if you were someone else experiencing you"
-    puts "for the first time you would feel incredibly unsure as to why everything would be structured in such a way, like why are there"
-    puts "so many powerplugs? Surely that could be a fire hazard. You remember the sound of scratching in your dream and then, you realize that the thing that has awoken you from the sweet"
-    puts "embrace of sleep was your dog Pippah scratching at the door, something has clearly gotten her attention"
-    puts "You could let her out of the room or ignore it and try to get back to sleep"
+    scroll("You wake up in your incredibly messy room, lucky its just the way you like it.\nIf you were someone else experiencing you for the first time you would feel incredibly unsure as to why everything would be structured in such a way.\nLike why are there so many powerplugs?\nSurely that could be a fire hazard.\nYou remember the sound of scratching in your dream.You realize that the thing that has awoken you from the sweet embrace of sleep was your dog Pippah.\nShe is sratching at the door, something has clearly gotten her attention.\nYou could let her out of the room or ignore it and try to get back to sleep\n")
    
     timed_response1
 
 end
 
 def filler1
-    puts "You decided to help your dog, knowing she'd just continue to scratch the door until you opened it anyway, and shes so goddam cute"
-    puts "who could say no really! Anyhow, you open the door and Pippah trots away and you realize you havent got any plans for the day, it is"
-    puts "........day after all! You think 'well i could go downstairs for some breakfast, have a shower, or there was that bottle of bourbon"
-    puts "in my room remembering that if you bothered to look it up theres probably a happy hour going on somewhere'."
+    scroll("You decided to help your dog, knowing she'd just continue to scratch the door until you opened it anyway, and shes so goddam cute who could say no really!\nAnyhow, you open the door and Pippah trots away and you realize you havent got any plans for the day, it is @#!$@?day after all!\nYou think 'Well i could go downstairs for some breakfast, have a shower, or there was that bottle of bourbon in my room remembering that if you bothered to look it up theres probably a happy hour going on somewhere'.\n")
 question_two_multi_choice
 end
 
@@ -101,31 +93,26 @@ def question_two_multi_choice
     
     case question2
     when "shower"
-            puts "You take a shower and feel a wave of relief wash over you, truly the shower is the last bastion of humanity and while you are in"
-            puts "this warm cocoon you feel a certain amount of time has passed, you finish your shower and get dressed."
+        scroll("You take a shower and feel a wave of relief wash over you, truly the shower is the last bastion of humanity.\nWhile you are in this warm cocoon you feel a certain amount of time has passed, you finish your shower and get dressed.\n")
             check1
     when "bourbon"
-            puts "You decide to ignore all rational thought and retreat back into your room and decide to swig the entire bottle of bourbon,"
-            puts "you realize you shouldn't have probably done something so reckless as you pass out, realizing you wasted your whole day, but considering"
-            puts "the pandemic this action may be a day well spent"
+        scroll("You decide to ignore all rational thought and retreat back into your room and decide to swig the entire bottle of bourbon.\nYou realize you shouldn't have probably done something so reckless as you pass out, realizing you wasted your whole day, but considering the pandemic this action may be a day well spent.\n")
             start
             
     when "breakfast"
         check1
     else 
-        puts "If you keep this up you and me are going to have a problem"
+        scroll("If you keep this up you and me are going to have a problem\n")
         question_two_multi_choice
     end
 end
 
 def check1    
-    puts "You decide to go downstairs for breakfast"
+    scroll("You decide to go downstairs for breakfast\n")
     if Character_selection[@answer2].agility < 5
-        puts "You attempt to go downstairs to have breakfast but for some reason even though you have done it countless times, you fall"
-        puts "and not just any old fall, this is a fall sets the limits on the capabilities of what a fall could really be capable of being"
-        puts "it was also a spiral staircase you fell down so by the end of the 180 degree bend and bottom of the stairs you die....."
-        puts "If only you had been more agile you could have avoided such a terrible fate"
+        scroll("You attempt to go downstairs to have breakfast but for some reason even though you have done it countless times, you fall.\nNot just any old fall, this is a fall sets the limits on the capabilities of what a fall could really be capable of being.\nIt was also a spiral staircase you fell down so by the end of the 180 degree bend and bottom of the stairs you die.....\n If only you had been more agile you could have avoided such a terrible fate.\n")
         puts "GAME OVER"
+        puts "push any button to continue"
         gets 
         start
     end
@@ -134,41 +121,28 @@ end
 
 
 def filler2
-    puts "You make it downstairs but you feel a chill run down your spine as you walk down the stairs, like a version of you died in a parralel"
-    puts "universe for you to survive in this one. You shrug if off, not like you believe in that paranormal shit anyway, its time to get"
-    puts "breakfast anyway, you enter the kitchen and look around for inspiration you see some fruit in a bowl, a kettle, a toaster, a pantry"
-    puts "You decided to not look in the pantry however, living in this house for the past 2 months for quarrantine has you knowing whats inside"
-    puts "without having to look, you make this decision because you have free will and are not being guided by an invisble man behind the"
-    puts "scenes...."
+    scroll("You make it downstairs but you feel a chill run down your spine as you walk down the stairs.\nLike a version of you died in a parralel universe for you to survive in this one.\nYou shrug if off, not like you believe in that paranormal shit anyway, its time to get breakfast!\nYou enter the kitchen and look around for inspiration you see some fruit in a bowl, a kettle, a toaster, a pantry.\nYou decided to not look in the pantry however, living in this house for the past 2 months for quarrantine has you knowing whats inside without having to look.\nYou make this decision because you have free will and are not being guided by an invisble man behind the scenes....\n")
     question_three_multi_choice
 end
     def question_three_multi_choice
-    puts "ANYWAY, you decide after looking around you can eat either Toast, Yoghurt and Oats OR Cyanide(Toast, Yoghurt, Cyanide)"
+    scroll("ANYWAY, you decide after looking around you can eat either Toast, Yoghurt and Oats OR Cyanide(Toast, Yoghurt, Cyanide)\n")
     question3 = gets.chomp
     
     case question3
     when "toast"
-        puts "You munch down on some toast, yum peanut butter, delicious, great choice you think to yourself, great thing we got that new 4 slice"
-        puts "toaster just in time, could you imagine not being able to toast 4 pieces of bread at the same time, truly this is the peak of"
-        puts "civilization, as you munch down on the toast you think about the GeoPolitical Climate and how their may be an incoming recession"
+        scroll("You munch down on some toast, yum peanut butter, delicious, great choice you think to yourself.\nGreat thing we got that new 4 slice toaster just in time, could you imagine not being able to toast 4 pieces of bread at the same time.\nTruly this is the peak of civilization, as you munch down on the toast you think about the GeoPolitical Climate and how their may be an incoming recession.\n")
         check2    
     when "yoghurt"
-        puts "Yum! you think as you decide to bite down on some delicious yoghurt with oats, what a nice healthy way to start the day, man do you"
-        puts "feel great for deciding to eat this, you know its gonna be benefical for you in years to come, in your own smugness you realise"
-        puts "that you ate those oats quite quickly. You make a mental note to savour it next time."
+        scroll("Yum! you think as you decide to bite down on some delicious yoghurt with oats, what a nice healthy way to start the day.\nMan do you feel great for deciding to eat this, you know its gonna be benefical for you in years to come, in your own smugness you realise that you ate those oats quite quickly.\nYou make a mental note to savour it next time.\n")
         check2    
     when "cyanide"
-        puts "Despite the instincts within you fight to withstand what seems like an invisble hand guiding your hands, you grab the cyanide"
-        puts "(AND WHO EVEN HAS SHIT LIKE THIS LYING AROUND?) and you ingest it, immediately you start to feel strange, you feel wrong, your"
-        puts "vision starts to fade and you fall to the ground, you die, what do you think cyanide does?"
+        scroll("Despite the instincts within you fight to withstand what seems like an invisble hand guiding your hands.\nYou grab the cyanide (AND WHO EVEN HAS SHIT LIKE THIS LYING AROUND?) and you ingest it, immediately you start to feel strange, you feel wrong.\nYour vision starts to fade and you fall to the ground, you die, what do you think cyanide does?\n")
         puts "GAME OVER"
         puts "push any button to continue"
         gets
         start
     else
-        puts "Look ago I get it you dont want to follow the rules, rules are made to be broken, fight the power, you want to rebel, but this"
-        puts "isn't really the place to do that because I'm in control here and you are just along for the ride so your gonna think about what you"
-        puts "did and then you are going to answer the question correctly OR ELSE"
+        scroll("Look okay I get it you dont want to follow the rules.\nRules are made to be broken, fight the power, you want to rebel, but this isn't really the place to do that.\nBecause I'm in control here and you are just along for the ride so your gonna think about what you did and then you are going to answer the question correctly OR ELSE\n")
         sleep(2)
         question_three_multi_choice
     end
@@ -177,16 +151,9 @@ end
 
 
 def check2    
-    puts "With breakfast settled you decided on what to do next, feeling stuck in this house for to long has gotten to you, so you decide the"
-    puts "best way going about this is to go outside, so off you go, despite having no plan when you get out there. So you open the front door"
-    puts "you feel the sunlight and it feels nice to be out in the fresh air."
+    scroll("With breakfast settled you decided on what to do next.\nFeeling stuck in this house for to long has gotten to you, so you decide best way going about this is to go outside.\nSo off you go, despite having no plan when you get out there.\nSo you open the front door you feel the sunlight and it feels nice to be out in the fresh air.\n")
     if Character_selection[@answer2].intelligence < 5
-        puts "You see a stranger in the distance and against all logic decide to go up to them and hug them and just start touching their face"
-        puts "you follow this up with you touching your own face and rubbing your eyes and nose, your compromised immune system and what feels like"
-        puts "some kind of time accelration taking place has fast tracked the Coronavirus symptons, who knew that doing exactly the opposite of"
-        puts "medical advice would lead to the very thing the advice was trying to avoid, your symptons seems to be going in some kind of Fast Forward"
-        puts "mode (for all your Zoomers this is a term where you play a DVD(A MOVIE ON A DISC)at faster then usual speed) and before you know it"
-        puts "you die from Covid - 19"
+        scroll("You see a stranger in the distance and against all logic decide to go up to them and hug them and just start touching their face.\nYou follow this up with you touching your own face and rubbing your eyes and nose.\nYour compromised immune system and what feels like some kind of time accelration taking place has fast tracked the Coronavirus symptons.\nWho knew that doing exactly the opposite of medical advice would lead to the very thing the advice was trying to avoid.\nYour symptons seems to be going in some kind of Fast Forward mode (for all your Zoomers this is a term where you play a DVD(A MOVIE ON A DISC)at faster then usual speed).\nBefore you know it you die from Covid - 19\n")
         puts "GAME OVER"
         puts "push any button to continue"
         gets
@@ -196,30 +163,16 @@ def check2
 end
 
 def question_four_time_sensitive
-    puts "After you look around outside, you see a person coughing in the distance and staying safe and logical you decide not to approach them"
-    puts "but who knows maybe you weren't so intelligent in another timeline, regardless you feel like this might be the timeline where everything"
-    puts "worksout, you decide to stay within the boundaries of your house, maybe one day you would like to venture out further then this, but"
-    puts "for now you feel as if there is some kind of invisible barrier halting your progress anyway, you try not to think about it because"
-    puts "you dont want to get to philosophical today. As you turn around to head inside you a portal materializes before you and a sense of dread"
-    puts "runs up your spine, you feel a sense of cold coming from the portal and an aura of foreboding."
-    puts "Suddenly! a tentacle comes out of the portal and wraps its way around you!"
+    scroll("After you look around outside, you see a person coughing in the distance.\nStaying safe and logical you decide not to approach them but who knows maybe you weren't so intelligent in another timeline.\n Regardless you feel like this might be the timeline where everything worksout.\nYou decide to stay within the boundaries of your house, maybe one day you would like to venture out further then this.\nBut for now you feel as if there is some kind of invisible barrier halting your progress anyway, you try not to think about it.\nBecause you dont want to get too philosophical today.\n As you turn around to head inside you a portal materializes before you and a sense of dread runs up your spine.\nYou feel a sense of cold coming from the portal and an aura of foreboding.\nSuddenly! A tentacle comes out of the portal and wraps its way around you!\n")
     timer2
 end
 
 
 def check3
-    puts "You are tossed to the ground and roll a few times before you can get up, you feel slimy for having gone through that portal, but there"
-    puts "is no time to worry about how slimy you are right now, you cant see the ground below you, not because its black but its invisible,"
-    puts "it doesn't exist, how is this even possible? Next you realize you are not alone in this impossible space as you realize that the tentacle"
-    puts "that grabbed you and threw you here was attached to something, its DAGON, Dagon is a deity who presides over the Deep Ones, an amphibious" 
-    puts "humanoid race indigenous to Earth's oceans. Maybe Lovecraft was speaking the truth when he wrote about all this stuff, who knew?"
-    puts "Thankfully for some reason you managed to avoid going insane staring at this impossible being."
+    scroll("You are tossed to the ground and roll a few times before you can get up.\nYou feel slimy for having gone through that portal, but there is no time to worry about how slimy you are right now.\nYou cant see the ground below you!\n Not because its pitch black but because its invisible.\nIt doesn't exist, how is this even possible?\n Next you realize you are not alone in this impossible space as you realize that the tentacle that grabbed you and threw you here was attached to something.\nIts DAGON, Dagon is a deity who presides over the Deep Ones, an amphibious humanoid race indigenous to Earth's oceans.\n Maybe Lovecraft was speaking the truth when he wrote about all this stuff, who knew?\nThankfully for some reason you managed to avoid going insane staring at this impossible being.\n")
     if Character_selection[@answer2].strength < 5 
-        puts "You feel hopeless staring at the monster knowing your strength will not be enough to overpower this creature, and feeling a flare"
-        puts "for nihilism you just stand there while the monster before you squashes you into a pancake."
-        puts "You have died in a desolate place, far from home, just like that spiderman movie except he was still on earth? That movie was"
-        puts "okay at best it didnt really do anything, not to mention spider man created his own problem in that movie, if any other movie did"
-        puts "that the marvel fandom would be screaming about how marvel could do it better, atleast the CGI in it was cool."
+        scroll("You feel hopeless staring at the monster knowing your strength will not be enough to overpower this creature.\nFeeling a flare for nihilism you just stand there while the monster before you squashes you into a pancake.\nYou have died in a desolate place, far from home, just like that spiderman movie.\nExcept he was still on earth?\n That movie was okay at best it didnt really do anything.\nNot to mention spider man created his own problem in that movie.\nIf any other movie did that the marvel fandom would be screaming about how marvel could do it better, atleast the CGI in it was cool.\n")
+        sleep(1)
         puts "GAME OVER"
         puts "push any button to continue"
         gets
@@ -229,35 +182,22 @@ def check3
 end
 
 def question_five_multi_choice
-    puts "being super confident in your strength the only real question is how do you plan to go about kicking this fish gods ass?"
+    scroll("being super confident in your strength the only real question is how do you plan to go about kicking this fish gods ass?\n")
+    sleep(1)
     puts "What power will you use?(Saiyan, DoomSlayer, DevilMayCry)"
     question5 = gets.chomp
     case question5
     when "saiyan"
-        puts "You focus your energy while screaming what seems like for atleast an entire 20 minute episode, but we know it was only 5"
-        puts "seconds and if you think otherwise come find me after. Suddenly your hair turns blonde and sticks up in the air like you"
-        puts "rubbed a balloon on it. Immediately you fly into the air and raise both hands above you asking the people of earth to share"
-        puts "their energy with you, you arent quite sure how you managed to communicate a global message but after what seems like a 5-6"
-        puts "episode arc you have a Spirit Bomb in your hands(amazing that Dagon did nothing during all of this).You throw the ball"
-        puts "at Dagon, he disintigrates leaving nothing behind."
+        scroll("You focus your energy while screaming what seems like for atleast an entire 20 minute episode.\nBut we know it was only 5 seconds and if you think otherwise come find me after.\nSuddenly your hair turns blonde and sticks up in the air like you rubbed a balloon on it.\nImmediately you fly into the air and raise both hands above you asking the people of earth to share their energy with you.\nYou arent quite sure how you managed to communicate a global message but after what seems like a 5-6 episode arc you have a Spirit Bomb in your hands(amazing that Dagon did nothing during all of this).\nYou throw the ball at Dagon, he disintigrates leaving nothing behind.\n")
     when "doomslayer"
-        puts "Immediately some heavily distorted guitar starts playing some death metal, but you already knew that would happen. You run"
-        puts "faster then you probably should, you immediately are upon the "
-        
-        puts "You feel overly confident in your ability to defeat this 'god' that you decide to not take it seriously, before moving faster"
-        puts "then the eye can see and proceeding to mid air combo Dagon with an assortment of weapons, guns and styles, if there was anyone"
-        puts "watching they would scarely believe that a fight could be orchestrated so perfectly for one side, as you beat the ever living"
-        puts "crap out of Dagon and look good while doing it before finishing the fight with a 'Real Impact' which kinda looks like a move from"
-        puts "Street Fighter. Dagon surrenders his soul to you and it becomes a new Devil Arm."
+        scroll("Immediately some heavily distorted guitar starts playing some death metal.\nBut you already knew that would happen.\nYou run faster then you thought humanly possible, you immediately are upon the God.\nImmediately some highly comical overly stylised violence happens that is to graphic for me 2 write about here.\nI want to avoid an R18 rating.\nWe can definitively say that Dagon is dead however.\n")
+    when "devilmaycry"
+        scroll("You feel overly confident in your ability to defeat this 'god' that you decide to not take it seriously.\nBefore moving faster then the eye can see and proceeding to mid air combo Dagon with an assortment of weapons, guns and styles.\nIf there was anyone watching they would scarely believe that a fight could be orchestrated so perfectly for one side.\nAs you beat the ever living crap out of Dagon and look good while doing it before finishing the fight with a 'Real Impact' which kinda looks like a move from Street Fighter.\nDagon surrenders his soul to you and it becomes a new Devil Arm.\n")
     else
-        puts "are you sure? (y/n)"
+        scroll("are you sure? (y/n)\n")
         final = gets.chomp.downcase
         if final == "y"
-            puts "the dev behind the game having cracked it with how much you have been trying to affect the integrity of his game finally snaps"
-            puts "Immediately the illusions that you see around you fade, however you are still in a simulation, the dev then cracks you open"
-            puts "puts his own code within you so you always know what a complete and utter failure you are to your parents and have the eternal"
-            puts "paranoia that noone takes you seriously and you feel the sudden urge to crap your pants at all times, knowing this you die"
-            puts "Why would you throw the game so close to the end"
+            scroll("The dev behind the game having cracked it with how much you have been trying to affect the integrity of his game finally snaps.\nImmediately the illusions that you see around you fade, however you are still in a simulation.\nThe dev then cracks you open his own code within you so you always know what a complete and utter failure you are to your parents.\nYou also have the eternal paranoia that no one takes you seriously and you feel the sudden urge to crap your pants at all times.\nKnowing this you die.\n Why would you throw the game so close to the end?\n")
             puts "GAME OVER"
             puts "push Enter key to proceed"
             gets
@@ -270,12 +210,10 @@ end
 
 
 def ending
-    puts "After the battle you make it home through a portal that leads you back to your house. You think after you step through it why did"
-    puts "walk through it without even questioning where it would lead. You find your dog looking at you and wagging her tail clearly happy"
-    puts "to see you, you did it, you survived another day, you pat your dog and feel good for doing it :)."
+    scroll("After the battle you make it home through a portal that leads you back to your house.\nYou think after you step through it why did walk through it without even questioning where it would lead.\nYou find your dog looking at you and wagging her tail clearly happy to see you, you did it, you survived another day.\nYou pat your dog and feel good for doing it :).\n")
     puts "VICTORY"
-    puts "Congratulations"
-    puts "press any key to continue"
+    scroll("Congratulations\n")
+    scroll("Press any key to continue\n")
     gets
     start
 end

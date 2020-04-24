@@ -1,10 +1,12 @@
 require "tty-prompt"
 prompt = TTY::Prompt.new
 require 'timeout'
+require 'colorize' 
+require 'colorized_string'
 
 def scroll(string)
     string.each_char do |x|
-        print x
+        print x.colorize(:blue)
         sleep(0.07)
       end
     end
@@ -22,7 +24,7 @@ timer = Thread.new do
 end
 
 answer = Thread.new do 
-    puts "What do you do? (Help/Ignore)"
+    puts "What do you do? (Help/Ignore)".colorize(:yellow)
 answer = gets.chomp.downcase.strip
 end
 
@@ -39,7 +41,7 @@ elsif answer == "ignore"
 else
     scroll("In your inaction you have fallen asleep\n")
     sleep(1)
-    scroll("Push ENTER key TWICE to continue\n")
+    puts "Push ENTER key TWICE to continue\n"
     gets
     system('clear')
     multi_choice_time_loop
@@ -54,7 +56,7 @@ def timer2
     end
     
     answer30 = Thread.new do 
-    puts "What do you do? Say something amusing or try and grab hold of something? (Quip,Grab)"
+    puts "What do you do? Say something amusing or try and grab hold of something? (Quip,Grab)".colorize(:yellow)
     answer30 = gets.chomp.downcase.strip
     end
     
@@ -68,7 +70,7 @@ def timer2
         scroll("You try to grab onto something with no success as a tentacle pulls you with no effort through a portal.")
     else
         scroll("in your inaction the tentacle pulls you through with little to no resistance.") 
-        puts "Push Enter key TWICE to continue"
+        puts "Push Enter key TWICE to continue".colorize(:yellow)
         gets
     end
     check3

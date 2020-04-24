@@ -3,28 +3,10 @@ require_relative "timer.rb"
 require 'colorize'
 require_relative 'menu.rb'
 require 'tty-prompt'
-def start
-    @done = false
-    while @done == false
-    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-    scroll("Welcome!\n")
-    scroll("You have reached the Anthony Covid Life Simulator!\n")
-    scroll("What would you like to do?\n")
-        puts "(Start = 1, Help = 2, Quit = 3)".colorize(:yellow)
-    startcheck = gets.chomp.to_i
-    case startcheck
-    when 2
-        help
-    when 3
-        return done = true
-    when 1
-        character_selection_screen
-    else
-        done = false
-       
-    end
-    end
-end
+
+
+
+
 
 def help
     scroll("Anthony Covid Life Simulator is a game about making decisions to get your Character to the end of the day.\nThis is done through making decisions, throughout the game questions will be given to you that will be expected to be answered.\nThese questions will often be backed up with the commands avaliable to you.\nIt is in your best interest to try and follow the instructions to the letter!, thats pretty much it, simple right?\nWhen you are ready push ENTER to get back to the Start\n")

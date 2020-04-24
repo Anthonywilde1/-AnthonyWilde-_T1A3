@@ -1,7 +1,8 @@
 require_relative "character.rb"
 require_relative "timer.rb"
 require 'colorize'
-
+require_relative 'menu.rb'
+require 'tty-prompt'
 def start
     @done = false
     while @done == false
@@ -26,13 +27,13 @@ def start
 end
 
 def help
-    scroll("Anthony Covid Life Simulator is a game about making decisions to get your Character to the end of the day.\nThis is done through making decisions, throughout the game questions will be given to you that will be expected to be answered.\nThese questions will often be backed up with the commands avaliable to you.\nIt is in your best interest to try and follow the instructions to the letter!, thats pretty much it, simple right?\nWhen you are ready push enter to get back to the Start\n")
+    scroll("Anthony Covid Life Simulator is a game about making decisions to get your Character to the end of the day.\nThis is done through making decisions, throughout the game questions will be given to you that will be expected to be answered.\nThese questions will often be backed up with the commands avaliable to you.\nIt is in your best interest to try and follow the instructions to the letter!, thats pretty much it, simple right?\nWhen you are ready push ENTER to get back to the Start\n")
     gets
 end
 
 def character_selection_screen
     puts "*****************************************************************************************************************************"
-    scroll("Welcome to the game!\nPlease Pick A Character from the following\n(Input 0-3 or 4 for character creation)")
+    scroll("Welcome to the game!\nPlease Pick A Character from the following\n(Input 0-3 or 4 for character creation)\n")
     Strong_Anth.stats
     Agile_Anth.stats
     Smrt_Anth.stats
@@ -185,7 +186,7 @@ end
 def question_five_multi_choice
     scroll("being super confident in your strength the only real question is how do you plan to go about kicking this fish gods ass?\n")
     sleep(1)
-    puts "What power will you use?(Saiyan, DoomSlayer, DevilMayCry)"
+    puts "What power will you use?(Saiyan, DoomSlayer, DevilMayCry)".colorize(:yellow)
     question5 = gets.chomp
     case question5
     when "saiyan"

@@ -1,5 +1,5 @@
 require "colorize"
-
+require_relative "timer.rb"
 
 def greeting
 puts "
@@ -13,4 +13,37 @@ puts "
 ".colorize(:blue)
 end
 
+def gameover
+    puts "
+    ▄██████▄     ▄████████    ▄▄▄▄███▄▄▄▄      ▄████████       ▄██████▄   ▄█    █▄     ▄████████    ▄████████ 
+   ███    ███   ███    ███  ▄██▀▀▀███▀▀▀██▄   ███    ███      ███    ███ ███    ███   ███    ███   ███    ███ 
+   ███    █▀    ███    ███  ███   ███   ███   ███    █▀       ███    ███ ███    ███   ███    █▀    ███    ███ 
+  ▄███          ███    ███  ███   ███   ███  ▄███▄▄▄          ███    ███ ███    ███  ▄███▄▄▄      ▄███▄▄▄▄██▀ 
+ ▀▀███ ████▄  ▀███████████  ███   ███   ███ ▀▀███▀▀▀          ███    ███ ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   
+   ███    ███   ███    ███  ███   ███   ███   ███    █▄       ███    ███ ███    ███   ███    █▄  ▀███████████ 
+   ███    ███   ███    ███  ███   ███   ███   ███    ███      ███    ███ ███    ███   ███    ███   ███    ███ 
+   ████████▀    ███    █▀    ▀█   ███   █▀    ██████████       ▀██████▀   ▀██████▀    ██████████   ███    ███ 
+                                                                                                   ███    ███ 
+ ".colorize(:red)
+ scroll("You have been released from this mortal coil\n")
+ scroll("Press Enter to Continue\n")
+ gets
+ start
+end
+
+def victory
+    puts "
+    ██    ██ ██  ██████ ████████  ██████  ██████  ██    ██ 
+    ██    ██ ██ ██         ██    ██    ██ ██   ██  ██  ██  
+    ██    ██ ██ ██         ██    ██    ██ ██████    ████   
+     ██  ██  ██ ██         ██    ██    ██ ██   ██    ██    
+      ████   ██  ██████    ██     ██████  ██   ██    ██    
+                                                           
+                                                           
+    ".colorize(:green)
+    scroll("Congratulations\nYou survived another day in this crazy world\n")
+    scroll("Press any key to continue\n")
+    gets
+    start
+end
 

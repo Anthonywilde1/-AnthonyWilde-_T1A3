@@ -59,7 +59,7 @@ def multi_choice_time_loop
     sleep(1)
     system("clear")
     
-    scroll("You wake up in your incredibly messy room, lucky its just the way you like it.\nIf you were someone else experiencing you for the first time you would feel incredibly unsure as to why everything would be structured in such a way.\nLike why are there so many powerplugs?\nSurely that could be a fire hazard.\nYou remember the sound of scratching in your dream.You realize that the thing that has awoken you from the sweet embrace of sleep was your dog Pippah.\nShe is sratching at the door, something has clearly gotten her attention.\nYou could let her out of the room or ignore it and try to get back to sleep.\n")
+    scroll("You wake up in your incredibly messy room, lucky its just the way you like it.\nIf you were someone else experiencing you for the first time you would feel incredibly unsure as to why everything would be structured in such a way.\nLike why are there so many powerplugs?\nSurely that could be a fire hazard.\nYou remember the sound of scratching in your dream.You realize that the thing that has awoken you from the sweet embrace of sleep was your dog Pippah.\nShe is scratching at the door, something has clearly gotten her attention.\nYou could let her out of the room or ignore it and try to get back to sleep.\n")
    
     timed_response1
 
@@ -95,10 +95,7 @@ def check1
     scroll("You decide to go downstairs for breakfast\n")
     if Character_selection[@answer2].agility < 5
         scroll("You attempt to go downstairs to have breakfast but for some reason even though you have done it countless times, you fall.\nNot just any old fall, this is a fall sets the limits on the capabilities of what a fall could really be capable of being.\nIt was also a spiral staircase you fell down so by the end of the 180 degree bend and bottom of the stairs you die.....\n If only you had been more agile you could have avoided such a terrible fate.\n")
-        puts "GAME OVER"
-        puts "push any button to continue".colorize(:yellow)
-        gets 
-        start
+        gameover
     end
     filler2
 end
@@ -121,10 +118,7 @@ end
         check2    
     when "cyanide"
         scroll("Despite the instincts within you fight to withstand what seems like an invisble hand guiding your hands.\nYou grab the cyanide (AND WHO EVEN HAS SHIT LIKE THIS LYING AROUND?) and you ingest it, immediately you start to feel strange, you feel wrong.\nYour vision starts to fade and you fall to the ground, you die, what do you think cyanide does?\n")
-        puts "GAME OVER"
-        puts "push any button to continue".colorize(:yellow)
-        gets
-        start
+        gameover
     else
         scroll("Look okay I get it you dont want to follow the rules.\nRules are made to be broken, fight the power, you want to rebel, but this isn't really the place to do that.\nBecause I'm in control here and you are just along for the ride so your gonna think about what you did and then you are going to answer the question correctly OR ELSE\n")
         sleep(2)
@@ -138,10 +132,7 @@ def check2
     scroll("With breakfast settled you decided on what to do next.\nFeeling stuck in this house for to long has gotten to you, so you decide best way going about this is to go outside.\nSo off you go, despite having no plan when you get out there.\nSo you open the front door you feel the sunlight and it feels nice to be out in the fresh air.\n")
     if Character_selection[@answer2].intelligence < 5
         scroll("You see a stranger in the distance and against all logic decide to go up to them and hug them and just start touching their face.\nYou follow this up with you touching your own face and rubbing your eyes and nose.\nYour compromised immune system and what feels like some kind of time accelration taking place has fast tracked the Coronavirus symptons.\nWho knew that doing exactly the opposite of medical advice would lead to the very thing the advice was trying to avoid.\nYour symptons seems to be going in some kind of Fast Forward mode (for all your Zoomers this is a term where you play a DVD(A MOVIE ON A DISC)at faster then usual speed).\nBefore you know it you die from Covid - 19\n")
-        puts "GAME OVER"
-        puts "push any button to continue".colorize(:yellow)
-        gets
-        start
+        gameover
     end
     question_four_time_sensitive
 end
@@ -157,10 +148,7 @@ def check3
     if Character_selection[@answer2].strength < 5 
         scroll("You feel hopeless staring at the monster knowing your strength will not be enough to overpower this creature.\nFeeling a flare for nihilism you just stand there while the monster before you squashes you into a pancake.\nYou have died in a desolate place, far from home, just like that spiderman movie.\nExcept he was still on earth?\n That movie was okay at best it didnt really do anything.\nNot to mention spider man created his own problem in that movie.\nIf any other movie did that the marvel fandom would be screaming about how marvel could do it better, atleast the CGI in it was cool.\n")
         sleep(1)
-        puts "GAME OVER"
-        puts "push any button to continue".colorize(:yellow)
-        gets
-        start
+        gameover
     end
     question_five_multi_choice
 end
@@ -182,10 +170,7 @@ def question_five_multi_choice
         final = gets.chomp.downcase
         if final == "y"
             scroll("The dev behind the game having cracked it with how much you have been trying to affect the integrity of his game finally snaps.\nImmediately the illusions that you see around you fade, however you are still in a simulation.\nThe dev then cracks you open his own code within you so you always know what a complete and utter failure you are to your parents.\nYou also have the eternal paranoia that no one takes you seriously and you feel the sudden urge to crap your pants at all times.\nKnowing this you die.\n Why would you throw the game so close to the end?\n")
-            puts "GAME OVER"
-            puts "push Enter key to proceed".colorize(:yellow)
-            gets
-            start
+           gameover
         end
     question_five_multi_choice
     end
@@ -195,10 +180,7 @@ end
 
 def ending
     scroll("After the battle you make it home through a portal that leads you back to your house.\nYou think after you step through it why did walk through it without even questioning where it would lead.\nYou find your dog looking at you and wagging her tail clearly happy to see you, you did it, you survived another day.\nYou pat your dog and feel good for doing it :).\n")
-    puts "VICTORY"
-    scroll("Congratulations\n")
-    scroll("Press any key to continue\n")
-    gets
-    start
+    victory
 end
+
 start

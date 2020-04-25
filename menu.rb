@@ -1,5 +1,6 @@
 require 'tty-prompt'
 require 'colorize'
+require_relative 'acriiart.rb'
 
 
 
@@ -10,7 +11,7 @@ def start
     @done = false
     while @done == false
     puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-    scroll("Welcome!\n")
+    greeting
     scroll("You have reached the Anthony Covid Life Simulator!\n")
     #scroll("What would you like to do?\n")
     choices = [

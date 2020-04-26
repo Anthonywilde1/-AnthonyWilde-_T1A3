@@ -49,7 +49,3 @@ def create
         Character_selection.pop
     Character_selection << not_anth
 end
-
-
-
-

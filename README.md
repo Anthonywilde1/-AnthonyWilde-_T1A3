@@ -1,6 +1,6 @@
-README
+# README
 
-Statement Of Purpose and Scope
+## Statement Of Purpose and Scope
 
 I plan to make a text based adventure game featuring me. The intro for the game is to start off simply enough with a title screen and then start to get quickly off track with events that aren't possible in the real word or they are possible but are highly unlikely. It would be a game where you are living a real life simulation of me and then quickly have it take a hyper-dramatic twists and turns for people who are unfamiliar with my life but also start to become extremely unreal. I will attempt to incorporate both my reality and the make believe to create a multi ending story line.
 
@@ -52,7 +52,7 @@ Storyboard (Character Strengths/ Stats/ Character Configuration) , Timed Respons
 
   
 
-  Features
+  ### Features
 
   Character Class - I will create a Character class within the game, they will all be me but with different stats as the game is about me, I may create the ability to make your own stats if I have enough time. There should be 4 versions of the class in play at the start for the user to select from(Strong/Smart/Agile/Regular Old Anthony). This will mean that the Character creator is on a separate file and the character in certain points within the game will have parts of their class checked to proceed with the story.  The variables that the Character class have/ use will need to be compatible with the rest of the work.
 
@@ -62,12 +62,24 @@ Storyboard (Character Strengths/ Stats/ Character Configuration) , Timed Respons
 
   
 
-  Outline 
+  ### Outline 
 
-  The User will open the app and be greeted by it. I plan to make the Intro detailing what the game will be about(hinting at what may occur in the game. I will give the user the choice to pick between 4 classes using user input (Possibly creating an option to create their own object too). The user will be given a push number 1 through 5 for this.  The 4 classes will be from an Object class and depending on which character you use different things in the game will happen. The User will then play through the game interacting with multiple choice points (which will appear and you have to type in the action to do certain actions) I will make these actions be decided by user input and they will be text answers as I feel it would add to the nostalgia of the game/ make it more immersive. But I will also be utilising some time based decision making as well. It will be the final feature that will be used within the game and will happen whether or not the player wants it to happen, the player can help it along by making a choice with user input or by waiting for the timer to expire. I plan to write some error messages and possibly loops to require correct inputs to proceed. It will give definitive feedback to the user about what to do. 
+  The User will open the app and be greeted by it. I plan to make the Intro detailing what the game will be about(hinting at what may occur in the game. I will give the user the choice to pick between 4 classes using user input (Possibly creating an option to create their own object too). The user will be given a push number 1 through 5 for this.  The 4 classes will be from an Object class and depending on which character you use different things in the game will happen. The User will then play through the game interacting with multiple choice points (which will appear and you have to type in the action to do certain actions) I will make these actions be decided by user input and they will be text answers as I feel it would add to the nostalgia of the game/ make it more immersive. But I will also be utilising some time based decision making as well. It will be the final feature that will be used within the game and will happen whether or not the player wants it to happen, the player can help it along by making a choice with user input or by waiting for the timer to expire. I plan to write some error messages and possibly loops to require correct inputs to proceed. It will give definitive feedback to the user about what to do. While still remaining unclear like the text based games of old were.
 
   
   
-  ## Flow Chart
+  ### Flow Chart
   
-  ![](/home/anthony/Downloads/20200421_135408.jpg)
+  ![](/home/anthony/projects/{AnthonyWilde_T1A3}/docs/20200421_135408.jpg)
+
+## Testing
+
+The first test I ran that can be seen in test.rb is the testing of all of the attributes of the Character class. I was testing to make sure that the numbers were what they were written down to be as this would be important to the game when things like stat checks are present, I needed to be confident that the numbers were accurately represented.
+
+
+
+The second thing i tested within test.rb I wanted to see if writing answer would make it show up on the screen accurately so I tested it with writing strings instead of numbers and things like capitalize. My gets.chomp is accurate and tested in that there is no error on the computer side, the error comes from the user and that is not within my control as much as I may like it to be, to remove this error would be to remove human control completely.
+
+## See Also
+
+https://trello.com/b/bahzwBP9/coding-life

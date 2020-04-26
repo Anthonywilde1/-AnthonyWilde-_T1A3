@@ -4,7 +4,7 @@ require_relative 'character.rb'
 
 class RealHumanTest < Test::Unit::TestCase
 
-#These tests show the class paarameters are working properly
+#These tests show the class parameters are working properly
 
     def test_strength
         human_strength = Character.new(6, 1, 9, "Ray Mysterio")
@@ -26,4 +26,17 @@ class RealHumanTest < Test::Unit::TestCase
         assert_equal("Roe Jogan", bogan.name)
     end
 
+end
+
+class UserInputTest < Test::Unit::TestCase
+
+    #shows that user input is working correctly
+    def test_choice1 
+        user_choice = gets.chomp.to_i
+        assert_equal(6, user_choice)
+    end
+    def test_choice2 
+        user_choice2 = gets.chomp.downcase.strip
+        assert_equal("help", user_choice2)
+    end
 end

@@ -48,5 +48,6 @@ def create
     not_anth = Character.new(str, agl, int, nume)
     if Character_selection.length >= 5
         Character_selection.pop
+    end
     Character_selection << not_anth
 end

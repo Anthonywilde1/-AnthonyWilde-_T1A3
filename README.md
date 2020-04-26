@@ -54,11 +54,11 @@ Storyboard (Character Strengths/ Stats/ Character Configuration) , Timed Respons
 
   ### Features
 
-  Character Class - I will create a Character class within the game, they will all be me but with different stats as the game is about me, I may create the ability to make your own stats if I have enough time. There should be 4 versions of the class in play at the start for the user to select from(Strong/Smart/Agile/Regular Old Anthony). This will mean that the Character creator is on a separate file and the character in certain points within the game will have parts of their class checked to proceed with the story.  The variables that the Character class have/ use will need to be compatible with the rest of the work. I also added a feature to create a class of ones own choosing, complete with customizable stats and name.
+  Character Class - The character class is a class object created in a separate file that will have several instance variables; Strength, Agility, Intelligence and Name. At the start of the game the player will be able to choose 1 of 4 characters created with this class and also have the option to use a method to create their own class. The class has all of its instance variables (except name) called once and compared to a base line number. If character's attribute (variable) is below the constant number, then you loose the game based on not having enough of that stat. Errors from this come from the user input for their input I will try to reduce this by making it to_i but if user puts a string instead of number I will warn them it'll have consequences and it'll result in a game over later.
 
-  Multiple Choices - Throughout the Course of the Story there will be times where you will have to choose one of several paths forward and be asked to choose which one to do, some will be designed to be repeated until the right choice is given and other choices will have more impact on the story. I for see many errors coming up from Multiple Choices as asking for user input from a user and them not responding would break the code so I will need to do lots of testing to get the code to work and repeat if the wrong input is given.  This feature will be clearly highlighted with yellow text.
+  Multiple Choices - This game will have multiple case statement questions that will be yellow in colour to signify their importance (the rest of the story will be in blue), these case statements will have the user write in one of several key words on the title screen and the one they choose will continue the story, some answers will result in a game over but others will result in story progression. The errors foreseeable with this feature also result from the user and their input, however I have added gets.chomp.downcase.strip to reduce the errors as much as possible and I have also added 'else' statements to catch people writing the wrong input. 
 
-  Timed Responses - The timed responses will be used sparingly but hopefully one will be used within a Loop as i think it would perfectly encapsulate what happens in the morning when my dog wakes me up by scratching at the door, if I try to ignore it or take to long she will scratch again and again until the door is open, I feel emulating this in the program will give people a sense of what it is like for me to get up in the morning.  I am unsure of the errors that will occur using a feature like this however I think it might get squashed and there be no countdown. I may need to adjust a timer as it might be hard to get the user to write a response in time. It will hopefully only be seen in the parts of the program that execute the timer. The timer will keep the user on their toes so to speak.
+  Timed Responses - The timed response feature will be used as the beginning and near end of my game, this method will ask for an input like normal but have a hidden timer associated with it. The timer will tic down and if it runs out of time it will cause the game to loop on the section it was on until the user inputs the correct statement. The 2nd timed response i will use in my game wont have any negative associations with it but for each option in the 2nd's case you will get a different response for each so if you want to see all 3 you have to play 3 times or look at my code. The errors from this would be handle from testing with other people to observe how they handle the time constraints.  
 
   
 
@@ -71,6 +71,8 @@ Storyboard (Character Strengths/ Stats/ Character Configuration) , Timed Respons
   ### Flow Chart
   
   ![](/home/anthony/projects/{AnthonyWilde_T1A3}/docs/20200421_135408.jpg)
+  
+  
 
 ## Testing
 

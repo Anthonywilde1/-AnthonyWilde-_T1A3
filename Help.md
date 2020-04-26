@@ -13,3 +13,4 @@ How to install :
 9. If gems are out of date use `gem update --system`
 10. Enjoy!!!!!!! 
 
+This should run on any system but I created it on Linux Ubuntu, for features view readme.md

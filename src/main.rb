@@ -23,28 +23,28 @@ def character_selection_screen
     @answer2 = gets.chomp.to_i
     case @answer2
     when 0 
-        puts "You have chosen Strong Anth!".colorize(:yellow)
+        puts "#{Character_selection[0].name}".colorize(:yellow)
         Character_selection[0]
         
         
     when 1 
-        puts "You have chosen Agile Anth!".colorize(:yellow)
+        puts "#{Character_selection[1].name}".colorize(:yellow)
         Character_selection[1]
         
         
     when 2
-        puts "You have chosen Smrt Anth!".colorize(:yellow)
+        puts "#{Character_selection[2].name}".colorize(:yellow)
         Character_selection[2]
         
             
     when 3
-        puts "You have chosen Regular Anth" .colorize(:yellow)
+        puts "#{Character_selection[3].name}".colorize(:yellow)
         Character_selection[3]
        
         
     when 4
         create
-        puts "Your character is not Anth...".colorize(:yellow)
+        puts "#{Character_selection[4].name}".colorize(:yellow)
         Character_selection[4]
     else 
         scroll("Think you are funny?,\nHUH?")

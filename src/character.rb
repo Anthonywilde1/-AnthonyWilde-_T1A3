@@ -45,7 +45,11 @@ def create
     puts "Please enter the character's name:"
     nume = gets.chomp
     not_anth = Character.new(str, agl, int, nume)
+    if Character_selection.length >= 5
+        Character_selection.pop
     Character_selection << not_anth
 end
+
+
 
 

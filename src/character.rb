@@ -36,11 +36,12 @@ Regular_Anth = Character.new(5, 5, 5, "Regular Anth")
 Character_selection = [Strong_Anth,Agile_Anth,Smrt_Anth,Regular_Anth]
 
 def create
-    puts "Please assign the strength attribute:"
+    puts "Beware that inputting words for Strength, Agility and Intelligence attributes will have unforseen circumstances."
+    puts "Please assign the strength attribute(1-9):"
     str = gets.chomp.to_i
-    puts "Please assign the agility attribute:"
+    puts "Please assign the agility attribute(1-9):"
     agl = gets.chomp.to_i
-    puts "Please assign the intelligence attribute:"
+    puts "Please assign the intelligence attribute(1-9):"
     int = gets.chomp.to_i
     puts "Please enter the character's name:"
     nume = gets.chomp
